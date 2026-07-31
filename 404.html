@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Redirecting | Screw &amp; Supply</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/favicon.png">
+</head>
+<body>
+  <p>Redirecting to Screw &amp; Supply…</p>
+  <script>
+    (function () {
+      var routes = {
+        '/home': '#/',
+        '/about': '#/about',
+        '/security': '#/security',
+        '/bitsandkeys': '#/security/bits-keys',
+        '/driversandkits': '#/security/drivers-kits',
+        '/sockets': '#/security/security-sockets',
+        '/6lobesecurity': '#/security/6-lobe-security',
+        '/hexsocketsecurity': '#/security/hex-socket-security',
+        '/spanners': '#/security/spanners',
+        '/oneways': '#/security/one-ways',
+        '/trigrooves': '#/security/trigrooves',
+        '/securitynuts': '#/security/security-nuts',
+        '/commercial': '#/commercial',
+        '/catalog': 'assets/Screw-and-Supply-Line-Card.pdf',
+        '/faq': '#/contact',
+        '/contactus': '#/contact',
+        '/contact': '#/contact',
+        '/prop65': '#/prop65',
+        '/quote-cart': '#/contact'
+      };
+      var path = window.location.pathname.replace(/\/+$/, '').toLowerCase() || '/';
+      var target = routes[path] || '#/';
+      var base = window.location.origin + '/';
+      window.location.replace(base + target);
+    }());
+  </script>
+</body>
+</html>
