@@ -397,27 +397,25 @@ document.addEventListener('DOMContentLoaded', async function() {
   </script>
   <script>
     (function () {
-      function syncRfqReplyTo(form) {
+      function normalizeRfqEmail(form) {
         if (!form || !form.matches('form[action^="https://formsubmit.co/"]')) return;
-        var email = form.querySelector('input[name="Email"]');
+        var email = form.querySelector('input[name="email"], input[name="Email"], input[name="_replyto"]');
+        if (!email) return;
+        email.name = 'email';
         var replyTo = form.querySelector('input[name="_replyto"]');
-        if (!replyTo) {
-          replyTo = document.createElement('input');
-          replyTo.type = 'hidden';
-          replyTo.name = '_replyto';
-          form.appendChild(replyTo);
+        if (replyTo && replyTo !== email) {
+          replyTo.remove();
         }
-        if (email) replyTo.value = email.value.trim();
       }
 
-      document.addEventListener('input', function (event) {
-        if (event.target.matches('input[name="Email"]')) {
-          syncRfqReplyTo(event.target.form);
+      document.addEventListener('focusin', function (event) {
+        if (event.target.matches('input[type="email"]')) {
+          normalizeRfqEmail(event.target.form);
         }
-      });
+      }, true);
 
       document.addEventListener('submit', function (event) {
-        syncRfqReplyTo(event.target);
+        normalizeRfqEmail(event.target);
       }, true);
     })();
   </script>
