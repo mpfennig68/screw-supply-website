@@ -1,0 +1,1 @@
+function toggleNav(btn){var nav=document.getElementById('site-nav');var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
