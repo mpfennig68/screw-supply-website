@@ -1,44 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Redirecting | Screw &amp; Supply</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512">
-  <link rel="apple-touch-icon" href="/favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found | Screw & Supply, LLC</title>
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;1,500&family=Libre+Franklin:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <p>Redirecting to Screw &amp; Supply…</p>
-  <script>
-    (function () {
-      var routes = {
-        '/home': '#/',
-        '/about': '#/about',
-        '/security': '#/security',
-        '/bitsandkeys': '#/security/bits-keys',
-        '/driversandkits': '#/security/drivers-kits',
-        '/sockets': '#/security/security-sockets',
-        '/6lobesecurity': '#/security/6-lobe-security',
-        '/hexsocketsecurity': '#/security/hex-socket-security',
-        '/spanners': '#/security/spanners',
-        '/oneways': '#/security/one-ways',
-        '/trigrooves': '#/security/trigrooves',
-        '/securitynuts': '#/security/security-nuts',
-        '/commercial': '#/commercial',
-        '/catalog': 'assets/Screw-and-Supply-Line-Card.pdf',
-        '/faq': '#/contact',
-        '/contactus': '#/contact',
-        '/contact': '#/contact',
-        '/prop65': '#/prop65',
-        '/quote-cart': '#/contact'
-      };
-      var path = window.location.pathname.replace(/\/+$/, '').toLowerCase() || '/';
-      var target = routes[path] || '#/';
-      var base = window.location.origin + '/';
-      window.location.replace(base + target);
-    }());
-  </script>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="logo"><img src="images/logo-trimmed.png" alt="Screw &amp; Supply, LLC — Security Fastener Specialists" width="279" height="54"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu" onclick="toggleNav(this)">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/products/">Security Products</a>
+        <a href="/applications/">Applications</a>
+        <a href="/drive-guide.html">Drive Guide</a>
+        <a href="/commercial-fasteners.html">Commercial</a>
+        <a href="/contact.html" class="btn-primary">Request a Quote</a>
+    </nav>
+  </header>
+<main id="main">
+  <div class="wrap">
+    <section class="section" style="text-align:center;padding:110px 40px;">
+      <div class="kicker" style="justify-content:center;display:block;">// 404</div>
+      <h1 style="font-size:52px;">Page not found.</h1>
+      <p class="lede" style="margin-left:auto;margin-right:auto;">The page you're looking for doesn't exist or may have moved. Try one of these instead:</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px;">
+        <a href="/" class="btn-accent">Home</a>
+        <a href="/products/" class="link-underline">Security Products &rarr;</a>
+        <a href="/applications/" class="link-underline">Applications &rarr;</a>
+        <a href="/contact.html" class="link-underline">Contact / Request a Quote &rarr;</a>
+      </div>
+    </section>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div>
+        <img src="images/logo-trimmed.png" alt="Screw &amp; Supply, LLC — Security Fastener Specialists" width="310" height="60">
+        <p class="tagline">Security fasteners. Secured by experience.</p>
+        <p class="blurb">Security and commercial fasteners, plus custom specials, for OEMs, integrators, and MROs — serving industry since 1960. Same-day shipping on in-stock items.</p>
+      </div>
+      <div>
+        <div class="col-label">SITE</div>
+        <nav class="site-links" aria-label="Footer">
+          <a href="/">Home</a><a href="/about.html">About</a><a href="/products/">Security Products</a><a href="/applications/">Applications</a><a href="/drive-guide.html">Drive Guide</a><a href="/commercial-fasteners.html">Commercial</a><a href="/assets/Screw-and-Supply-Line-Card.pdf" style="color:var(--accent);">Line Card (PDF)</a>
+        </nav>
+      </div>
+      <div>
+        <div class="col-label">CONTACT</div>
+        <address>
+          1712 Church Street<br>
+          Holbrook, NY 11741<br>
+          <span style="display:block;margin-top:12px;">TEL <a href="tel:+16315672900">(631) 567-2900</a></span>
+          <span style="display:block;margin-top:6px;">TOLL FREE <a href="tel:+18002231316">(800) 223-1316</a></span>
+          <span style="display:block;margin-top:6px;">FAX (631) 567-3057</span><br>
+          <a href="mailto:sales@screwsupply.com">sales@screwsupply.com</a>
+        </address>
+        <div class="prop-links"><a href="/contact.html">Contact</a><a href="/prop-65.html">Prop 65</a></div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>&copy; 2026 SCREW &amp; SUPPLY, LLC &middot; HOLBROOK NY 11741</span>
+      <span><a href="/prop-65.html">PROP 65</a></span>
+    </div>
+  </footer>
+  <script src="assets/nav.js"></script>
 </body>
 </html>
