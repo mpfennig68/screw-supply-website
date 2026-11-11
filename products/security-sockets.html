@@ -39,6 +39,10 @@
 .socket-chart tbody th{font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
 .socket-chart-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 </style>
+<style>
+.row-description-table tbody th{white-space:nowrap;}
+.row-description-table .product-description{display:block;margin-top:7px;font-family:'Libre Franklin',system-ui,sans-serif;font-size:12.5px;font-weight:400;line-height:1.55;letter-spacing:normal;white-space:nowrap;color:var(--ink-muted);}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -77,16 +81,16 @@
         <h2 id="socket-chart-heading" style="font-size:30px;margin-bottom:10px;">Tri-Groove Socket Size Chart</h2>
         <p>Find the catalog-listed socket for your Tri-Groove screw or nut size. Screw and nut sizes are listed separately because they use different socket series.</p>
         <div class="socket-chart-scroll" role="region" aria-labelledby="socket-chart-heading" tabindex="0">
-          <table class="socket-chart" aria-describedby="socket-chart-note">
+          <table class="socket-chart row-description-table" aria-describedby="socket-chart-note">
             <caption>Screw &amp; Supply Tri-Groove socket selection</caption>
             <thead><tr><th scope="col">Socket part number</th><th scope="col">For screw sizes</th><th scope="col">For nut sizes</th></tr></thead>
             <tbody>
-              <tr><th scope="row">TRS04</th><td>#4</td><td></td></tr>
-              <tr><th scope="row">TRS06</th><td>#6, #8</td><td></td></tr>
-              <tr><th scope="row">TRS10</th><td>#10, #12, #14 (1/4&quot;)</td><td></td></tr>
-              <tr><th scope="row">TRS20</th><td></td><td>#10, 1/4&quot;</td></tr>
-              <tr><th scope="row">TRS30</th><td></td><td>5/16&quot;, 3/8&quot;, 8 mm</td></tr>
-              <tr><th scope="row">TRS40</th><td></td><td>1/2&quot;, 5/8&quot;, 10 mm</td></tr>
+              <tr><th scope="row">TRS04<span class="product-description">Tri-Groove Security Socket for #4 Screws</span></th><td>#4</td><td></td></tr>
+              <tr><th scope="row">TRS06<span class="product-description">Tri-Groove Security Socket for #6, #8 Screws</span></th><td>#6, #8</td><td></td></tr>
+              <tr><th scope="row">TRS10<span class="product-description">Tri-Groove Security Socket for #10, #12, #14 (1/4″) Screws</span></th><td>#10, #12, #14 (1/4")</td><td></td></tr>
+              <tr><th scope="row">TRS20<span class="product-description">Tri-Groove Security Socket for #10, 1/4″ Nuts</span></th><td></td><td>#10, 1/4"</td></tr>
+              <tr><th scope="row">TRS30<span class="product-description">Tri-Groove Security Socket for 5/16″, 3/8″, 8 mm Nuts</span></th><td></td><td>5/16", 3/8", 8 mm</td></tr>
+              <tr><th scope="row">TRS40<span class="product-description">Tri-Groove Security Socket for 1/2″, 5/8″, 10 mm Nuts</span></th><td></td><td>1/2", 5/8", 10 mm</td></tr>
             </tbody>
           </table>
         </div>
