@@ -1,5 +1,5 @@
 (() => {
-  const normalize = value => value.toLowerCase().replace(/[‐-―]/g, '-').replace(/[\s"#]/g, '');
+  const normalize = value => value.toLowerCase().replace(/×/g, 'x').replace(/[‐-―]/g, '-').replace(/[\s"#]/g, '');
   const search = document.querySelector('.catalog-search');
   if (search) {
     search.hidden = false;
@@ -13,7 +13,7 @@
       groups.forEach((group, index) => {
         let matches = 0;
         group.querySelectorAll('tbody tr').forEach(row => {
-          const match = !query || normalize(row.textContent + ' ' + group.querySelector('summary').textContent).includes(query);
+          const match = !query || normalize(row.textContent + ' ' + (row.dataset.search || '') + ' ' + group.querySelector('summary').textContent).includes(query);
           row.hidden = !match;
           if (match) matches++;
         });
