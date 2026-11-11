@@ -21,7 +21,7 @@
         group.open = query ? matches > 0 : defaults[index];
         count += matches;
       });
-      status.textContent = count ? `${count} catalog listings${query ? ' match your search' : ''}.` : 'No matching listings. Try a part number or another size, or contact us.';
+      status.textContent = count ? `${count} catalog listing${count === 1 ? '' : 's'}${query ? (count === 1 ? ' matches your search' : ' match your search') : ''}.` : 'No matching listings. Try a part number or another size, or contact us.';
     };
     input.addEventListener('input', apply);
     apply();
